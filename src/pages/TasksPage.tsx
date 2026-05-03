@@ -147,7 +147,7 @@ export const TasksPage = () => {
       messageApi.success("Статус задачи сменился")
       setDetailOpen(false)
     } catch (error){
-      messageApi.error(error instanceof Error ? error.message : 'Не удалось удалить задачу')
+      messageApi.error(error instanceof Error ? error.message : 'Не удалось сменить статус задачу')
     }
   }
 

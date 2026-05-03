@@ -18,8 +18,7 @@ createRoot(document.getElementById('root')!).render(
             borderRadius: 6,
             fontFamily: 'Inter, system-ui, Segoe UI, Roboto, sans-serif',
           },
-        }}
-      >
+        }}>
         <AntApp>
           <BrowserRouter>
             <App />

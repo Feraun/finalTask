@@ -71,9 +71,6 @@ export const AuthPage = () => {
       <Card className="auth-card">
         <div className="auth-heading">
           <Typography.Title level={1}>Task Board</Typography.Title>
-          <Typography.Text type="secondary">
-            Task Board
-          </Typography.Text>
         </div>
 
         <Segmented<AuthMode>
