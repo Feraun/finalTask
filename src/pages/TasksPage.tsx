@@ -152,11 +152,16 @@ export const TasksPage = () => {
   }
 
   const handleSelfAssign = async (id: string) => {
+    
       if (!user){
         return
       }
-      await dispatch(selfAssignTask({ id, userId: user.id })).unwrap()
-      messageApi.success('Задача назначена на вас')
+      try {
+        await dispatch(selfAssignTask({ id, userId: user.id })).unwrap()
+        messageApi.success('Задача назначена на вас')
+      } catch(error){
+        messageApi.error(error instanceof Error ? error.message : "Не удалось назначить задачу самому себе")
+      }
   }
 
   const columns = useMemo<TableProps<Task>['columns']>(
